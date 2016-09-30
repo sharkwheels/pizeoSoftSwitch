@@ -115,8 +115,8 @@ void setup() {
   
   pinMode(ledPin, OUTPUT);
   pinMode(ledPin2, OUTPUT);
-  pinMode(buttonPin, INPUT);
-  
+  //pinMode(buttonPin, INPUT
+  pinMode(buttonPin, INPUT_PULLUP);  // don't use a pull down on this. 
   digitalWrite(ledPin, LOW);
   digitalWrite(ledPin2, LOW);
 
@@ -136,7 +136,7 @@ void loop() {
   if ((millis() - lastDebounceTime) > debounceDelay) {
     if (reading != buttonState) {
       buttonState = reading;
-      if(buttonState == HIGH && !isPlaying){
+      if(buttonState == LOW && !isPlaying){
         
         
         // don't play the same song twice in a row. 
