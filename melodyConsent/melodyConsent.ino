@@ -61,15 +61,15 @@ void setup(){
 
   // LED PINS ////////////////////////////
 
-  pinMode(buttons[0].btnLed, OUTPUT);
-  pinMode(buttons[1].btnLed, OUTPUT);
-  pinMode(buttons[2].btnLed, OUTPUT);
+  pinMode(buttons[0].btnLed, OUTPUT); // 13
+  pinMode(buttons[1].btnLed, OUTPUT); // 12 
+  pinMode(buttons[2].btnLed, OUTPUT); // 11
 
   // INPUT PINS //////////////////////////
 
-  pinMode(buttons[0].btnPin, INPUT_PULLUP);
-  pinMode(buttons[1].btnPin, INPUT_PULLUP);
-  pinMode(buttons[2].btnPin, INPUT_PULLUP);
+  pinMode(buttons[0].btnPin, INPUT_PULLUP); // 2
+  pinMode(buttons[1].btnPin, INPUT_PULLUP); // 3
+  pinMode(buttons[2].btnPin, INPUT_PULLUP); // 4
 
 }
 
@@ -86,15 +86,15 @@ void playSongs(int s){
   //Serial.println(songID);
   if(songID == 1){
     Serial.println("NO");
-    delay(2000);
+    delay(2000);  // song or function would go here instead of delay
   } else if(songID == 2){
     Serial.println("YES");
-    delay(2000);
+    delay(2000);  // song or function would go here instead of delay
   } else if(songID == 3){
     Serial.println("SURPRISE");
-    delay(2000);
+    delay(2000);  // song or function would go here instead of delay
   }
-  isPlaying = false;
+  isPlaying = false;  // set the boolean back to false. 
   
 }
 
